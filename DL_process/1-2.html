@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+</head>
+<body>
+<main>
+<h2>MySQL&nbsp;Workbenchのインストール</h2>
+    <p>ダウンロードフォルダにある<mark>mysql-installer-community-8.0.35.0.msi</mark>をクリックし、起動してください。
+    <br>ユーザーアカウント制御がどうのこうの言ってくるかもしれませんが、大した事聞いてきてないので<mark>はい</mark>を選択してください。
+    <br><br>しばらく待ってるとMySQL&nbsp;Installerが開きます。</p>
+ 
+    <img src="pic/21.jpg" alt="MySQLInStaller">
+    
+    <p>Choosing&nbsp;a&nbsp;Setup&nbsp;Typeを<mark>Full</mark>に切り替えて、<mark>Next</mark>をクリックしてください。</p>
+
+    <p>そうすると<mark>Installation</mark>に進みます。<br>
+    ここでは先ほど選んだインストールタイプに合わせてインストールするソフトが一覧で表示されます。<br>
+    下のような表示になれば大丈夫です。<mark>Execute</mark>をクリックしてください。<br>
+    もし足りないものがあれば、ひとつ前に戻ってインストールタイプをFullにしてください。</p>
+ 
+    <img src="pic/22.jpg" alt="MySQLInStaller_1">
+  
+    <p>Executeをクリックするとインストールが始まります。</p>
+   
+    <img src="pic/23.jpg" alt="MySQLInStaller">
+   
+    <p>緑色のチェックマークはStatisがComplete、つまりインストールが完了したことを意味しています。<br>
+    鉛筆マークはインストール中ということです。<br>
+    もしもインストールが失敗しても、アイコンをクリックすれば再度インストールが実行されたと思います。よく覚えてないので<br>
+    よっぽどのことがない限り失敗しないので問題ないかと思います。失敗する事例を確認したかったのですが、失敗させるのが難しいので許してください。
+    </p>
+   
+    <p>完了したら<mark>Next</mark>をクリックしましょう。先ほどの場所にはCancelがあり、間違えてそれをクリックすると、MySQL&nbsp;Serverがセットアップされずに終わってしまい、悲惨な目に遭います。(1敗)</p>
+   
+    <img src="pic/24.jpg" alt="MySQLInStaller_1">
+   
+    <p>次に<mark>Product&nbsp;Configuration</mark>です。Nextをクリックしましょう。<br>
+ 
+    <p>Type&nbsp;and&nbsp;Networkでは特にこれと言って変更するべき項目はありません。</p>
+    
+    <img src="pic/25.jpg" alt="MySQLInStaller_1">
+    
+    <ul>
+        <li>Config&nbsp;TypeがDevelopment&nbsp;Computer(開発用コンピュータ)を選択しているか</li>
+        <li>個人的にサーバーを建てている人はポート番号がダブっていないか</li>
+    </ul>
+    
+    <p>これらをしっかり確認し<mark>Next</mark>を選択してください。</p>
+
+    <p>次にAuthentication&nbsp;Methodに移ります。<br>
+    認証メゾットについて何かしら聞いてきているのは分かりますが、よくわからんので日本語訳したところ、</p>
+
+    <blockquote>
+        <p>認証に強力なパスワード暗号化が使えるよ。<br>
+        MySQL8はSHA256っていうすげー認証方法がつかえるよ。<br>
+        古いMySQLだと使えないから古いの使ってる人は下を選んでね</p>
+    </blockquote>
+
+    <p>とのことだったのでそのまま<mark>Next</mark>をクリックしましょう。</p>
+
+    <p>Accounts&nbsp;and&nbsp;Rolesでは、管理者権限を持つRootアカウントのパスワードを決めたり、別のアカウントにロールを追加しアクセスできる情報に制限をかけたりする機能が実装されています。<br>
+    今回は別のアカウントを作る必要はないのでRootアカウントのパスワードだけ決めます。<br>
+    忠告しておきますが、<mark>Rootアカウントのパスワードを忘れると最悪の場合再インストールする羽目になるので、何が何でも絶対に、パスワードを正しくメモしておいてください。</mark>
+    Javaを用いてeclipseで開発する際に、データベースに接続するためにアカウントのパスワードが要求されます。<br>
+    覚えやすいパスワードでも構いません。見やすいところにメモしちゃっても大丈夫です。何が何でもパスワードを忘れないでください。
+    </p>
+
+    <p>パスワードを2回入力したら<mark>Next</mark>をクリックしてください。</p>
+
+    <p>Apply&nbsp;Configurationまで特に変更することはないのでNext連打してください。</p>
+
+    <p>Apply&nbsp;Configurationの<mark>Execute</mark>をクリックし、Finishを押してください。<br>
+    MySQL&nbsp;Router&nbsp;ConfigurationもNext押してFinish押してください。<br>
+    <mark>Connect&nbsp;To&nbsp;Server</mark>で先ほどメモしたパスワードを入力し、<mark>Checkを押してStatusがConnection&nbsp;succeededになったのを確認しNext</mark>を押してください。<br>
+    </p>
+    <img src="pic/28.jpg" alt="MySQLInStaller_1">
+    <p>設定を通すためにExecuteを押してください。完了したらFinishしてください。</p>
+    <p>Nectを何回か押すとやっとの思いでInstallation&nbsp;Completeの文字を見ることができます。Finishを押せば実際にMySQLでのデータベース操作が行えます。やったね。</p>
+
+
+<div class="rounded-box">
+    <ul>
+        <li>人によってはやれMicrosoft.Net&nbsp;FrameworkがないだのやれVisual&nbsp;C++がないだの言われますがインストールされてないと何もできないのでインストールしてきてください</li>
+        <li>学校のパソコンには.Net&nbsp;Frameworkがないうえにインストールに許可が必要なのであきらめてください。</li>
+        <li><a href="https://www.microsoft.com/en-us/download/details.aspx?i" target="_blank" rel="noopener noreferred=30653r">Microsoft.Net&nbsp;Fremeworkのインストーラーはこちら</a>ちなみにSelect&nbsp;languageで日本語が選べます</li>
+        <li><a href="https://visualstudio.microsoft.com/ja/downloads/?q=Visual+Studio+2019+Microsoft+Visual+C%2B%2B+%E5%86%8D%E9%A0%92%E5%B8%83%E5%8F%AF%E8%83%BD%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8" target="_blank" rel="noopener noreferred=30653r">visualstudioのインストーラはこちら</a>これらのインストール手順は省きます</li>
+        <li>MySQLはインストール先を選ぶことはありませんが、この2つのソフトをインストールするときはディレクトリ名に日本語名が入っていると動作しない可能性があるので、必ずファイルのパスに日本語が含まれていないことを確認してください。</li>
+        <li>ちなみにディレクトリとはファイルを入れておく、要するにフォルダの事を意味しています。ファイルのパスとはファイルの住所のことです。エクスプローラーの検索欄の隣にあるボックスをクリックしてみて出てくるやつです。</li>
+    </ul>
+</div>
+</main>
+</body>
+</html>

@@ -1,0 +1,45 @@
+ body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+main {
+    padding: 20px;
+}
+
+h2 {
+    border: 3px solid #35224F;
+    background-color: #CDD5FC;
+    color: #000000;
+    padding: 3px;
+    text-align: center;
+}
+
+h3 {
+    border: 3px solid #35224F;
+    background-color: #CDD5FC;
+    color: #000000;
+    padding: 3px;
+    text-align: center;
+    font-size: 1em; 
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.rounded-box {
+    border: 2px solid #333;
+    border-radius: 10px; /* 角の丸みを調整する値 */
+    padding: 10px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  table, th, td {
+    border: 1px solid black;
+  }

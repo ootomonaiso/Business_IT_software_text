@@ -1,0 +1,16 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+main {
+    padding: 20px;
+}
+
+h2 {
+    border: 3px solid #35224F;
+    background-color: #CDD5FC;
+    color: #000000;
+    padding: 3px;
+    text-align: center;
+  }

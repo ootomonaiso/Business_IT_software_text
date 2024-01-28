@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noarchive">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main>
+  <h2>CREATE文</h2>
+    <p>テーブルにしろデータベースにしろよっぽどのことがなければ使うことのないCREATE文の構文例です。</p>
+    <h3>スキーマの作成</h3>
+    <p>スキーマの作成は<b>CREATE</b>を用いて実行します。</p>
+    <p>クエリ<br><b>CREATE SCHEMA `お好みのスキーマ名` ;</b></p>
+    <div class="rounded-box">
+        <p><b>`</b>左のこれが打てない人へ<br>
+        これはShift+7で打てるシングルクォーテーションではなく、
+        shift+@で打てるバッククォートです。</p>
+        <p>シングルクーテーションはオレンジ、バッククォートは茶色で表示されます。</p>
+    </div>
+  <h2>データベースの作成</h2>
+    <p>データベースの作成はやっぱり<b>CREATE</b>を使います。下に一例をあげておきます。</p>
+    <div class="rounded-box">
+      <p>CREATE TABLE `スキーマ名(なくてもいいよ)`.`作りたいテーブルの名前` (<br>
+        `id` INT NOT NULL,<br>
+        `name` VARCHAR(45) NOT NULL,<br>
+        `date` DATE NOT NULL,<br>
+        PRIMARY KEY (`id`));</p>
+  </div>
+  <p>カッコ内は作りたいテーブルの列の設定を列挙しています。</p>
+  <div class="rounded-box">
+    <p>
+      `作りたい列名` データ型 列の制約,
+    </p>
+  </div>
+  <p></p>
+
+
+</main>
+</body>
+</html>
+

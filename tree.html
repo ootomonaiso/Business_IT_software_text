@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    .tree {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .tree-item {
+      cursor: pointer;
+    }
+
+    .tree-item:hover {
+      background-color: #f0f0f0;
+    }
+
+    .selected {
+      background-color: #c0c0c0;
+    }
+
+    .nested {
+      display: none;
+    }
+
+    .nested.show {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+<ul class="tree">
+  <li class="tree-item" onclick="toggleNested(this)">
+    <span>トップ</span>
+    <ul class="nested">
+      <li class="tree-item" onclick="event.stopPropagation()"><a href="top.html" target="main">トップ</a></li>
+      <li class="tree-item" onclick="event.stopPropagation()"><a href="readme.html" target="main">りーどみー</a></li>
+    </ul>
+  </li>
+  <li class="tree-item" onclick="toggleNested(this)">
+    <span>インストール</span>
+    <ul class="nested">
+      <li class="tree-item" onclick="event.stopPropagation()"><a href="DL_process/preparation.html" target="main">はじめに</a></li>
+      <li class="tree-item" onclick="event.stopPropagation()"><a href="DL_process/1-1.html" target="main">ダウンロード</a></li>
+      <li class="tree-item" onclick="event.stopPropagation()"><a href="DL_process/1-2.html" target="main">MySQL&nbsp;Workbenchのインストール</a></li>
+      <li class="tree-item" onclick="event.stopPropagation()"><a href="DL_process/1-3.html" target="main">eclipseのインストール</a></li>
+    </ul>
+  </li>
+  <li class="tree-item" onclick="toggleNested(this)">
+    <span>セットアップ</span>
+    <ul class="nested">
+      <li class="tree-item" onclick="event.stopPropagation()"><a href="div_preparation/preparation.html" target="main">ソフトウェアのセットアップ</a></li>
+      <li class="tree-item" onclick="event.stopPropagation()"><a href="div_preparation/1-1.html" target="main">MySQL&nbsp;Workbenchのセットアップ</a></li>
+      <li class="tree-item" onclick="event.stopPropagation()"><a href="div_preparation/1-2.html" target="main">eclipseのセットアップ</a></li>
+    </ul>
+  </li>
+  <li class="tree-item" onclick="toggleNested(this)">
+    <span>[必読]なんちゃって虎の巻</span>
+    <ul class="nested">
+      <li class="tree-item" onclick="event.stopPropagation()"><a href="div_careful/div_c.html" target="main">はじめに</a></li>
+      <li class="tree-item" onclick="event.stopPropagation()"><a href="div_careful/1-1.html" target="main">文字コードについて</a></li>
+      <li class="tree-item" onclick="event.stopPropagation()"><a href="div_careful/1-2.html" target="main">ファイル構造について</a></li>
+      <li class="tree-item" onclick="event.stopPropagation()"><a href="div_careful/1-3.html" target="main">Windows11の使える機能</a></li>
+    </ul>
+    <li class="tree-item" onclick="toggleNested(this)">
+      <span>SQL関連</span>
+      <ul class="nested">
+        <li class="tree-item" onclick="event.stopPropagation()"><a href="SQL/sql_index.html" target="main">目次</a></li>
+        <li class="tree-item" onclick="event.stopPropagation()"><a href="SQL/00.html" target="main">SQL基礎</a></li>
+        <li class="tree-item" onclick="event.stopPropagation()"><a href="SQL/01.html" target="main">CREATE</a></li>
+      </ul>
+  </li>
+</ul>
+
+<script>
+  function toggleNested(item) {
+    const nestedList = item.querySelector('.nested');
+    nestedList.classList.toggle('show');
+
+    const treeItems = document.querySelectorAll('.tree-item');
+    treeItems.forEach(treeItem => treeItem.classList.remove('selected'));
+    item.classList.add('selected');
+  }
+</script>
+
+</body>
+</html>

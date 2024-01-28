@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+</head>
+<body>
+<main>
+  <h2>ダウンロード</h2>
+    <p>業務用ITソフトウェアの開発をするために必要なものを準備していきます</p>
+    <ul>
+        <li>MySQL&nbsp;Workbench</li>
+        <li>eclipseIDE&nbsp;var.4.26.0</li>
+        <li>Java20</li>
+      </ul>
+    <p>これらのインストーラーをダウンロードしていきます。</p>
+
+<h3>MySQL&nbsp;Workbench</h3>
+  <a href="https://dev.mysql.com/downloads/windows/installer/8.0.html" target="_blank" rel="noopener noreferrer">MySQL&nbsp;Workbenchダウンロードページ</a>
+  <br>
+  <p>上記のリンクへアクセスし、表示されるインストーラーのバージョンなどを確認し、インストーラーをダウンロードしてください</p>
+  <img src="pic/11.png" alt="mysqworkbench_DL">
+  <p>おそらくこのようなページが開いているはずです。</p>
+
+  <ul>
+    <li>Select&nbsp;Version(バージョン選択)で8.0.35を選んでいるか</li>
+    <li>Select&nbsp;Operating&nbsp;System(OS選択)で、Windowsを選んでいるか</li>
+  </ul>
+  <p>これらを確認し、2つあるダウンロードボタンのうち、下のダウンロードボタンを押してください。</p>
+  <p>そうすると下のようなページに飛ぶと思います。<br>
+  Orcleのアカウントを作れという圧を感じますが、それに負けずに<mark>No&nbsp;thanks,just&nbsp;my&nbsp;download.</mark>を押してダウンロードを始めてください。</p>
+  <img src="pic/17.jpg" alt="mysqworkbench_DL">
+  
+<h3>eclipseIDE&nbsp;var.4.26.0</h3>
+  <a href="https://willbrains.jp/" target="_blank" rel="noopener noreferrer">eclipseIDEダウンロードページ</a>
+  <p>おそらくこのようなページが開いているはずです。</p>
+  <img src="pic/12.jpg" alt="eclipseIDE_DL">
+  <p>青い3つのボタンのうち、Eclipse2022をクリックしてください。</p>
+  <img src="pic/13.jpg" alt="eclipseIDE_DL_inst">
+  <p>このようなページに遷移します。画像中で赤い丸で囲われているインストーラーをクリックします。</p>
+
+  <ul>
+    <li>Windows&nbsp;x64を選んでいること</li>
+    <li>Windows&nbsp;x64でもFull&nbsp;Editionを選んでいること</li>
+    <li>Javaを選んでいること</li>
+  </ul>
+  <p>これらを確認し、クリックしてください。</p>
+  <p>押したらインストールが始まるはずですが、人によってはポップアップブロックを有効にしている人もいると思います。<br>
+  遷移先のページに、httpsから始まるリンクが置いてあると思うのでそこをクリックするとダウンロードが始まります。<br>
+  下の画像のようにリンクがあるはずです。</p>
+  <img src="pic/14.jpg" alt="eclipseIDE_DL_inst_b">
+  <br>
+
+<div class="rounded-box">
+    <ul>
+      <li>Windows&nbsp;x86では動かないかもしれませんが、<br>まず最近のPCで32bitのCPUを搭載している例は稀ですし、32bitのPCには最近のPCでは考えられないくらい制約が厳しいのでゴッツイゲーミングPCユーザーは気にしなくていいです。</li>
+      <li>どうしても気になって夜しか眠れなくなってしまった場合は落ち着いてWindowsキーとXキーを押し、出てくるメニューから設定を選択し、システムを選んで
+        <br>Windous10では詳細設定を
+        <br>Windows11ではバージョン情報を選択して、システムの種類を確認してみてください。よっぽど古い化石を使ってない場合64ビット&nbsp;オペレーションシステム、x64&nbsp;ベース&nbsp;プロセッサと書いてあります。
+      </li>
+      <li>ちなみにCドライブ直下にProglam&nbsp;Files&nbsp;(x86)と書かれている奴には32bitで動作するプログラムが格納されてます。<br>
+        64bitは32bitの2の32乗のデータが扱えます。すごいね。</li>
+      <li>Full&nbsp;Editionを選ばないとTomcatを同梱してくれないので余計な手間がかかります。</li>
+    </ul>   
+</div>
+
+<h3>Java20</h3> 
+<a href="https://www.oracle.com/java/technologies/javase/jdk20-archive-downloads.html" target="_blank" rel="noopener noreferrer">Java20ダウンロードページ</a>
+  <p>上記のリンクへアクセスし、表示されるインストーラーの中で、<mark>Windows&nbsp;x64&nbsp;Installer</mark>を探し、右側にあるリンクをクリックしてください。自動でダウンロードが始まります。
+  <br>一番上にあるからと言ってLinuxのインストーラーを選んでもセットアップされません。
+  <br><br>
+  わけわかんなくて焦ってる人のために画像でダウンロード手順を説明します。
+  <br>まず、サイトにアクセスするとこのような状態だと思います。
+  <br>上の方はLinuxのインストーラーなので、下にスクロールしていきます。</p>
+  <img src="pic/15.jpg" alt="java20DL">
+  <p>スクロールしていくと、今回使う20.0.2のひとつ前のバージョンである20.0.1のインストーラーのダウンロード場所が出てきます。
+    <br>その上にある<Mark>Windows&nbsp;x64&nbsp;Installer</Mark>が今回使用するものです。右側にあるリンクをクリックし、ダウンロードしてください。
+    </p>
+  <img src="pic/16.jpg" alt="java20DLn">
+
+</body>
+</html>

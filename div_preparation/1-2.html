@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+</head>
+<body>
+<main>
+    <h2>eclipseのセットアップ</h2>
+    <p>eclipseを開発が始められるところまでセットアップしていきます。</p>
+    <p>保存先を変えていなければ<b>C:\pleiades\2022-12\eclipse</b>にある<b>eclipse.exe</b>を開きます。ファイルのパスは検索ボックスの隣にぶち込むところがあるのでコピペして入れちゃって大丈夫です。</p>
+    <img src="pic/21.jpg" alt="eclipse_setup">
+    <p>起動中はこのような表示が出ます。<br>
+    起動が終わると画像を撮り損ねましたがワークスペースの場所を聞かれます。もし、ファイルのパスが入力されていない状態になっていたら、<b>C:\pleiades\2022-12</b>にあるworkspaceを選択しておいてください。</p>
+    <p>ワークスペースを起動するとプロジェクトを編集する画面が出てきます。</p>
+    <img src="pic/22.jpg" alt="eclipse_setup">
+    <p>情報量に圧倒されますが、まず左側のパッケージエクスプローラーにある<b>Mavenプロジェクトの作成</b>を選択するか、もしくは
+    <b>上のメニューバーからファイルを選択し新規からMavenプロジェクトの作成</b>でもできます。</p>
+    <p>そうすればこのような画面が出るはずです。<mark>次へ</mark>をクリックしてください。</p>
+    <img src="pic/23.jpg" alt="eclipse_setup">
+    <p>そうすれば<mark>アーキタイプの選択</mark>に進みます。</p>
+    <ul>
+        <li><b>フィルター</b>に<b>maven-archetype-quickstart</b>と入力</li>
+        <li>一覧がぶわーっと出てくるので<b>グループid</b>が<b>org.apach.maven.archetypes</b>のものを探す</li>
+    </ul> 
+    <p>名前順になっているので中々深いところにある場合があります。</p>
+    <img src="pic/24.jpg" alt="eclipse_setup">
+    <p>グループid名やアーティファクトid名が正しいのを確認し、クリックしてください。</p>
+    <img src="pic/25.jpg" alt="eclipse_setup">
+    <p>出てくるボックスに次のテキストを正しく入力してください。アーティファクト名を変えても動かないことはないですが、私はこれで開発しているので最終手段のコピペができます。</p>
+    <ul>
+        <li>グループid=com.example</li>
+        <li>アーティファクトID=demo</li>
+        <li>バージョン=そのまま</li>
+        <li>パッケージ=com.example.demo</li>
+    </ul>
+    <p>パッケージは自動入力されるはずです。このまま完了をクリックしてください。しばらくコンソールがあらぶった後、</p>
+    <img src="pic/26.jpg" alt="eclipse_setup">
+    <p>ここではこういう内容で作るけどおk?って聞かれているので<b>Y::</b>の先に<b>Y</b>と入力してエンターを押してください。</p>
+    <p>そのあとしばらくほったらかすと緑色の文字で<b>BUILD&nbsp;SUCCESS</b>と出てくるはずです。</p>
+    <img src="pic/27.jpg" alt="eclipse_setup">
+
+    <h3>java20の追加</h3>
+    <p>メニューバーのウインドウから設定を開いてください。</p>
+    <p>開けたらJavaのインストール済みのJREを開いてください。</p>
+    <img src="pic/28.jpg" alt="eclipse_setup">
+    <p>ウインドウの右側にある追加を選択して、標準VMをクリックしてください。</p>
+    <ul>
+        <li>JREホーム=jdk-20フォルダを探す。変えてなければ<b>C:\Program Files\Java\jdk-20</b>ここにあるはず</li>
+        <li>JRE名=名前は変更できます。他のものと合わせてJava20と記載してもいいかと</li>
+    </ul>
+    <p>右上に赤文字でエラーが書かれていなかったらそのまま<mark>完了</mark></p>
+    <p>追加出来たら追加したjava20にチェックを打って画面下部の<b>適用</b>を押してから<b>適用して閉じる</b></p>
+    <img src="pic/211.jpg" alt="eclipse_setup">
+    <p>これでセットアップは完了です。これよりも大変な開発前の準備がまだ残ってますが。</p>
+</main>
+</body>
+</html>
