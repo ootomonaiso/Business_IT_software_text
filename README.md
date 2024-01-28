@@ -1,0 +1,2 @@
+# Business_IT_software_text
+業務用ITソフトウェア部門での開発用のドキュメント等が保存されてます
