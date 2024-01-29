@@ -39,6 +39,14 @@
       color: #fff;
       border: none;
       border-radius: 5px;
+      z-index: 1000;
+    }
+
+    .menu-bar {
+      width: 25px;
+      height: 3px;
+      background-color: #fff;
+      margin: 4px 0;
     }
   </style>
 </head>
@@ -48,7 +56,7 @@
   <!-- ツリーメニューの内容 -->
 </ul>
 
-<div id="toggleButton" onclick="toggleFrameSize()">
+<div id="toggleButton" onclick="toggleTreeFrame()">
   <div class="menu-bar"></div>
   <div class="menu-bar"></div>
   <div class="menu-bar"></div>
@@ -64,7 +72,7 @@
     item.classList.add('selected');
   }
 
-  function toggleFrameSize() {
+  function toggleTreeFrame() {
     const frameset = parent.document.getElementsByTagName('frameset')[0];
     const treeFrame = parent.document.getElementsByName('tree')[0];
 
