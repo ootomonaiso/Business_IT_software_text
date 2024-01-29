@@ -86,5 +86,24 @@
   }
 </script>
 
+    <div id="toggleButton" onclick="toggleFrameSize()">開閉</div>
+  <!-- ここにツリーメニューのコンテンツを追加 -->
+  <script>
+    function toggleFrameSize() {
+      const frameset = parent.document.getElementsByTagName('frameset')[0];
+      const treeFrame = parent.document.getElementsByName('tree')[0];
+
+      if (treeFrame.offsetWidth > 0) {
+        // 閉じる
+        treeFrame.style.width = '0';
+        frameset.cols = '0,*';
+      } else {
+        // 開く
+        treeFrame.style.width = '200px'; // 初期の幅
+        frameset.cols = '200,*';
+      }
+    }
+  </script>
+
 </body>
 </html>
