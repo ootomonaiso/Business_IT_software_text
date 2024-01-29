@@ -28,6 +28,18 @@
     .nested.show {
       display: block;
     }
+
+        #toggleButton {
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      cursor: pointer;
+      padding: 10px;
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+    }
   </style>
 </head>
 <body>
@@ -87,7 +99,6 @@
 </script>
 
     <div id="toggleButton" onclick="toggleFrameSize()">開閉</div>
-  <!-- ここにツリーメニューのコンテンツを追加 -->
   <script>
     function toggleFrameSize() {
       const frameset = parent.document.getElementsByTagName('frameset')[0];
