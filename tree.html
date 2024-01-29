@@ -29,9 +29,9 @@
       display: block;
     }
 
-        #toggleButton {
+    #toggleButton {
       position: fixed;
-      bottom: 10px;
+      top: 10px;
       right: 10px;
       cursor: pointer;
       padding: 10px;
@@ -77,15 +77,22 @@
       <li class="tree-item" onclick="event.stopPropagation()"><a href="div_careful/1-2.html" target="main">ファイル構造について</a></li>
       <li class="tree-item" onclick="event.stopPropagation()"><a href="div_careful/1-3.html" target="main">Windows11の使える機能</a></li>
     </ul>
-    <li class="tree-item" onclick="toggleNested(this)">
-      <span>SQL関連</span>
-      <ul class="nested">
-        <li class="tree-item" onclick="event.stopPropagation()"><a href="SQL/sql_index.html" target="main">目次</a></li>
-        <li class="tree-item" onclick="event.stopPropagation()"><a href="SQL/00.html" target="main">SQL基礎</a></li>
-        <li class="tree-item" onclick="event.stopPropagation()"><a href="SQL/01.html" target="main">CREATE</a></li>
-      </ul>
+  </li>
+  <li class="tree-item" onclick="toggleNested(this)">
+    <span>SQL関連</span>
+    <ul class="nested">
+      <li class="tree-item" onclick="event.stopPropagation()"><a href="SQL/sql_index.html" target="main">目次</a></li>
+      <li class="tree-item" onclick="event.stopPropagation()"><a href="SQL/00.html" target="main">SQL基礎</a></li>
+      <li class="tree-item" onclick="event.stopPropagation()"><a href="SQL/01.html" target="main">CREATE</a></li>
+    </ul>
   </li>
 </ul>
+
+<div id="toggleButton" onclick="toggleFrameSize()">
+  <div class="menu-bar"></div>
+  <div class="menu-bar"></div>
+  <div class="menu-bar"></div>
+</div>
 
 <script>
   function toggleNested(item) {
@@ -96,25 +103,22 @@
     treeItems.forEach(treeItem => treeItem.classList.remove('selected'));
     item.classList.add('selected');
   }
-</script>
 
-    <div id="toggleButton" onclick="toggleFrameSize()">開閉</div>
-  <script>
-    function toggleFrameSize() {
-      const frameset = parent.document.getElementsByTagName('frameset')[0];
-      const treeFrame = parent.document.getElementsByName('tree')[0];
+  function toggleFrameSize() {
+    const frameset = parent.document.getElementsByTagName('frameset')[0];
+    const treeFrame = parent.document.getElementsByName('tree')[0];
 
-      if (treeFrame.offsetWidth > 0) {
-        // 閉じる
-        treeFrame.style.width = '0';
-        frameset.cols = '0,*';
-      } else {
-        // 開く
-        treeFrame.style.width = '200px'; // 初期の幅
-        frameset.cols = '200,*';
-      }
+    if (treeFrame.offsetWidth > 0) {
+      // 閉じる
+      treeFrame.style.width = '0';
+      frameset.cols = '0,*';
+    } else {
+      // 開く
+      treeFrame.style.width = '200px'; // 初期の幅
+      frameset.cols = '200,*';
     }
-  </script>
+  }
+</script>
 
 </body>
 </html>
