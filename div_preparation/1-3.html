@@ -11,109 +11,57 @@
     </main>
 
     <h3>Pom.xml</h3>
-    <p>pom.xmlとはMavenでどのライブラリを使用するかの宣言を行うファイルです。Project&nbsp;Object&nbsp;modelの頭文字をとっています。このファイル内でプロジェクトを動かす上で必要なものを書いているファイルだと思っておいてください。</p>
+    <p>pom.xmlとはMavenでどのライブラリを使用するかの宣言を行うファイルです。Project Object modelの頭文字をとっています。このファイル内でプロジェクトを動かす上で必要なものを書いているファイルだと思っておいてください。</p>
     <br>
     <pre>
-    <?xml version="1.0" encoding="UTF-8"?><!-- エンコード方式とxmlバージョンの宣言 -->
-	<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.1.1</version>
-		<relativePath/> 
-	</parent>
-	
-	<groupId>com.example</groupId>	<!-- グループID-->
-	<artifactId>test</artifactId>	<!-- アーティファクトID -->
-	<version>0.0.1-SNAPSHOT</version> <!-- バージョン宣言-->
-	<name>test</name> <!-- 表示名 -->
-	<description>Demo project for Spring Boot</description><!--プロジェクトの説明の指定 -->
-	
-	<properties><!-- プロパティの指定-->
-		<java.version>20</java.version><!-- javaのバージョン宣言 -->
-	</properties>
-	
-	<dependencies> <!-- 要素の列挙 -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-jpa</artifactId>
-		</dependency>
-		
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-thymeleaf</artifactId>
-		</dependency>
-		
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-		
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-devtools</artifactId>
-		</dependency>
-		
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<optional>true</optional>
-		</dependency>
-		
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-		
-		<dependency><!-- My_SQLの宣言-->
-			<groupId>com.mysql</groupId>
-			<artifactId>mysql-connector-j</artifactId>
-			<scope>runtime</scope>
-		</dependency>
-		
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-security</artifactId>
-		</dependency>
-		
-		<dependency>
-			<groupId>org.thymeleaf.extras</groupId>
-			<artifactId>thymeleaf-extras-springsecurity6</artifactId>
-		</dependency>
-		
-		<!-- JSP サポート -->
-		<dependency>
-			<groupId>org.apache.tomcat.embed</groupId>
-			<artifactId>tomcat-embed-jasper</artifactId>
-		</dependency>
-		
-		<dependency>
-			<groupId>org.glassfish.web</groupId>
-			<artifactId>jakarta.servlet.jsp.jstl</artifactId>
-		</dependency>
-	</dependencies>
-	
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-				<configuration>
-					<excludes>
-						<exclude>
-							<groupId>org.projectlombok</groupId>
-							<artifactId>lombok</artifactId>
-						</exclude>
-					</excludes>
-					<mainClass>com.example.demo.TestApplication</mainClass>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
-</project>
-</pre>
+        &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+        &lt;!-- エンコード方式とxmlバージョンの宣言 --&gt;
+        &lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+            xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
+            &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+            &lt;parent&gt;
+                &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+                &lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt;
+                &lt;version&gt;3.1.1&lt;/version&gt;
+                &lt;relativePath/&gt; 
+            &lt;/parent&gt;
+            
+            &lt;groupId&gt;com.example&lt;/groupId&gt;    &lt;!-- グループID--&gt;
+            &lt;artifactId&gt;test&lt;/artifactId&gt;    &lt;!-- アーティファクトID --&gt;
+            &lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt;  &lt;!-- バージョン宣言--&gt;
+            &lt;name&gt;test&lt;/name&gt;  &lt;!-- 表示名 --&gt;
+            &lt;description&gt;Demo project for Spring Boot&lt;/description&gt;  &lt;!--プロジェクトの説明の指定 --&gt;
+            
+            &lt;properties&gt;  &lt;!-- プロパティの指定--&gt;
+                &lt;java.version&gt;20&lt;/java.version&gt;  &lt;!-- javaのバージョン宣言 --&gt;
+            &lt;/properties&gt;
+            
+            &lt;dependencies&gt;  &lt;!-- 要素の列挙 --&gt;
+                &lt;dependency&gt;
+                    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+                    &lt;artifactId&gt;spring-boot-starter-data-jpa&lt;/artifactId&gt;
+                &lt;/dependency&gt;
+                &lt;!-- 他の依存関係の記述 --&gt;
+            &lt;/dependencies&gt;
+            
+            &lt;build&gt;
+                &lt;plugins&gt;
+                    &lt;plugin&gt;
+                        &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+                        &lt;artifactId&gt;spring-boot-maven-plugin&lt;/artifactId&gt;
+                        &lt;configuration&gt;
+                            &lt;excludes&gt;
+                                &lt;exclude&gt;
+                                    &lt;groupId&gt;org.projectlombok&lt;/groupId&gt;
+                                    &lt;artifactId&gt;lombok&lt;/artifactId&gt;
+                                &lt;/exclude&gt;
+                            &lt;/excludes&gt;
+                            &lt;mainClass&gt;com.example.demo.TestApplication&lt;/mainClass&gt;
+                        &lt;/configuration&gt;
+                    &lt;/plugin&gt;
+                &lt;/plugins&gt;
+            &lt;/build&gt;
+        &lt;/project&gt;
+    </pre>
 </body>
 </html>
